@@ -76,15 +76,12 @@ console.log(sum / Object.values(game.odds).length);
 
 for (const [team, score] of Object.entries(game.odds)) {
   const teamName = team === "x" ? "draw" : `victory ${game[team]}`;
-  //console.log(`Odd of ${(game[team] ? 'victory' game[team]  :"draw")}: ${score}`);
-  //console.log(`Odd of ${(game[team] ??= "draw")} : ${score}`);
   console.log(`Odd of ${teamName} : ${score}`);
 }
 
+//Creating object based on array
 const scores = {};
-//const item = scores[player] ? scores[player] +=1 : scores[player] =1
 for (const player of game.scored) {
-  //scores[player] = 1;
   scores[player] ? (scores[player] += 1) : (scores[player] = 1);
 }
 console.log(scores);
