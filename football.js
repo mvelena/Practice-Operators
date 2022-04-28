@@ -62,4 +62,14 @@ printGoals(...players1);
 printGoals("Lewandowski", "Gnarby", "Lewandowski", "Hummels");
 printGoals(...game.scored);
 
-team1 < team2 console.log('Team 1 is more likely to win'); 
+team1 < team2 && console.log("Team 2 is more likely to win");
+//Looping over array and object
+for (const [i, name] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${name}`);
+}
+
+let sum = 0;
+for (const i of Object.values(game.odds)) {
+  sum += i;
+}
+console.log(sum / Object.values(game.odds).length);
